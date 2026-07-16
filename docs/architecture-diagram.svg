@@ -1,0 +1,58 @@
+<svg width="900" height="360" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>AI Ops Assistant architecture</title>
+<desc>Company documents feed a Claude Project knowledge base. A Google Sheet feeds an n8n workflow that classifies feedback via AI, writes results back to the sheet, and sends a Gmail alert on negative sentiment. The same sheet feeds a live Streamlit dashboard.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="#6E6B62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<rect width="900" height="360" fill="#F7F6F2"/>
+
+<!-- Row 1: Knowledge base flow -->
+<rect x="40" y="30" width="190" height="56" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="135" y="53" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#2C2C2A">Company documents</text>
+<text x="135" y="71" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">SOPs, policies, notes</text>
+
+<line x1="230" y1="58" x2="288" y2="58" stroke="#6E6B62" stroke-width="1" marker-end="url(#arrow)"/>
+
+<rect x="290" y="30" width="230" height="56" rx="8" fill="#DCEAE7" stroke="#0F5E56" stroke-width="0.5"/>
+<text x="405" y="53" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#04342C">Claude Project</text>
+<text x="405" y="71" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0F5E56">Searchable knowledge base</text>
+
+<!-- Row 2: Automation + Dashboard flow -->
+<rect x="40" y="160" width="230" height="60" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="155" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#2C2C2A">Google Sheet</text>
+<text x="155" y="202" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5F5E5A">feedback-log (source of truth)</text>
+
+<line x1="270" y1="180" x2="328" y2="180" stroke="#6E6B62" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="299" y="172" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6E6B62">reads</text>
+
+<rect x="330" y="160" width="220" height="60" rx="8" fill="#DCEAE7" stroke="#0F5E56" stroke-width="0.5"/>
+<text x="440" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#04342C">n8n workflow</text>
+<text x="440" y="202" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0F5E56">Classify via AI (OpenRouter)</text>
+
+<path d="M440 220 L440 235 L270 235 L270 225" fill="none" stroke="#6E6B62" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="355" y="248" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6E6B62">writes sentiment + topic</text>
+
+<line x1="440" y1="220" x2="440" y2="258" stroke="#6E6B62" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="500" y="242" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6E6B62">if negative</text>
+
+<rect x="330" y="260" width="220" height="56" rx="8" fill="#F4DEDB" stroke="#B23A2E" stroke-width="0.5"/>
+<text x="440" y="283" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#4A1B0C">Gmail alert</text>
+<text x="440" y="301" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#B23A2E">Notifies Customer Success</text>
+
+<path d="M270 175 L620 175 L620 158" fill="none" stroke="#6E6B62" stroke-width="1" marker-end="url(#arrow)"/>
+
+<rect x="620" y="160" width="240" height="60" rx="8" fill="#DCEAE7" stroke="#0F5E56" stroke-width="0.5"/>
+<text x="740" y="184" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#04342C">Live dashboard</text>
+<text x="740" y="202" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0F5E56">Streamlit, auto-refreshing</text>
+
+<!-- Legend -->
+<rect x="40" y="335" width="12" height="12" rx="3" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="58" y="345" font-family="sans-serif" font-size="12" fill="#5F5E5A">Data source</text>
+<rect x="160" y="335" width="12" height="12" rx="3" fill="#DCEAE7" stroke="#0F5E56" stroke-width="0.5"/>
+<text x="178" y="345" font-family="sans-serif" font-size="12" fill="#5F5E5A">Built in this project</text>
+<rect x="320" y="335" width="12" height="12" rx="3" fill="#F4DEDB" stroke="#B23A2E" stroke-width="0.5"/>
+<text x="338" y="345" font-family="sans-serif" font-size="12" fill="#5F5E5A">Alert / action</text>
+</svg>
