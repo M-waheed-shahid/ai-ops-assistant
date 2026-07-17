@@ -68,7 +68,9 @@ Setup instructions for the live version: [`dashboard/LIVE_SETUP.md`](./dashboard
 ai-ops-assistant/
 ├── knowledge-base/
 │   ├── index.md
-│   └── raw-docs/          # 11 mock company documents
+│   ├── raw-docs/             # 11 mock company documents
+|   ├── README.md
+|   └── screenshots/
 ├── automation/
 │   ├── README.md
 │   ├── workflow-feedback-triage.json
