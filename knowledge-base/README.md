@@ -3,7 +3,7 @@
 Screenshots demonstrating the Claude Project answering questions grounded
 in the uploaded documents above.
 
-![PTO policy question](./screenshots/What's%20out%20PTO%20rollover%20policy)
+![PTO policy question](./screenshots/What's%20our%20PTO%20rollover%20policy)
 
 ![Discovery call checklist](./screenshots/What's%20the%20discovery%20call%20checklist.png)
 
